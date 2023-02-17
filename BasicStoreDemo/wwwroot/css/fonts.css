@@ -1,0 +1,33 @@
+﻿* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+i {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../images/texture.jpg");
+    background-repeat: repeat/no-repeat;
+    background-size: 1600px 840px;
+}
+
+.logo-class {
+    font-family: 'Babylonica', cursive;
+    font-size: 42px;
+}
+
+.input-bg-color {
+    background-color: #cccccc;
+}
+
+    .input-bg-color:focus {
+        outline: none;
+        background-color: #cccccc;
+        box-shadow: 0 0 10px #cccccc;
+    }

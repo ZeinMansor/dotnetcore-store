@@ -1,0 +1,48 @@
+﻿@model BasicStoreDemo.ViewModels.IndexViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+
+<div class="container my-2">
+
+    <div class="row justify-content-center">
+
+        @foreach (var product in Model.products)
+        {
+
+            <div class="col col-sm-6 col-md-4 col-lg-4 mx-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/800" class="card-img-top" alt="product-placeholder">
+                    <div class="card-body">
+                        <h5 class="card-title">@(product.name)</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                        @if (product.discountPrice != null || product.discountPrice != 0)
+                        {
+                            <div class="row">
+                                <p class="col">@(product.discountPrice)</p>
+                                <p class="col"><del>@(product.price)</del></p>
+                            </div>
+                        }
+                        else
+                        {
+                            <p>@(product.price)</p>
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+</div>
+
+
+
+
+
